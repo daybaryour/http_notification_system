@@ -1,0 +1,12 @@
+{
+	"apps": [
+		{
+			"name": "publisher",
+			"script": "./publisher/index.js"
+		},
+		{
+			"name": "subscriber",
+			"script": "./subscriber/index.js"
+		}
+	]
+}
