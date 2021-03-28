@@ -25,6 +25,8 @@ app.post("/publish/:topic", (req, res) => {
  */
 app.post("/subscribe/:topic", async (req, res) => {
 	//automatic subscription to the topic being shared
+
+	//TODO: should add validation somewhere here (Celebrater & Joi)
 	let url = req.body.url;
 	let topic = req.params.topic;
 
@@ -38,10 +40,10 @@ app.post("/subscribe/:topic", async (req, res) => {
 		.catch(function (error) {
 			//some error occured probably we are calling a link that doesnt exist so we ignore subscription or we have typed bonjour lemasi
 
-			//Coulda throw error here but choose to retuurn array depends on system setup on the front
+			//Coulda throw error here but choose to retuurn error object, adjustable and depends on system setup on the front
 			return {
 				status:
-					"Some Error Occured, recipient server not responding, subscription failed",
+					"Some Error Occured, recipient server not responding, link subscription failed",
 				error: true,
 				message: error.message,
 			};

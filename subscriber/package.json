@@ -9,7 +9,7 @@
 		"run": "node index.js"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Adewumi Adebayo -- debaryour@gmail.com",
 	"license": "ISC",
 	"dependencies": {
 		"express": "^4.17.1",

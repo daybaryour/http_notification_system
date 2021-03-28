@@ -25,6 +25,6 @@ app.post("/:param", (req, res) => {
 	res.json(response).status(200);
 });
 
-app.listen(3008, () => {
-	console.log("Second Subscriber server is listening to port 3008");
+app.listen(7000, () => {
+	console.log("Second Subscriber server is listening to port 7000");
 });
